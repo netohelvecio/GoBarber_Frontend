@@ -8,7 +8,6 @@ import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { signInRequest } from '~/store/modules/auth/actions';
 
 import logo from '~/assets/logo.svg';
-import { ButtonSubmit } from './style';
 
 const schema = Yup.object().shape({
   email: Yup.string()
@@ -37,13 +36,13 @@ export default function SignIn() {
           placeholder="Sua senha secreta"
         />
 
-        <ButtonSubmit type="submit">
+        <button type="submit">
           {loading ? (
             <AiOutlineLoading3Quarters color="#FFF" size={20} />
           ) : (
             'Acessar'
           )}
-        </ButtonSubmit>
+        </button>
         <Link to="/register">Criar conta gratuita</Link>
       </Form>
     </>
