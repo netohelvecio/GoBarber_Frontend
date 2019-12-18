@@ -9,7 +9,6 @@ export default function user(state = INITIAL_STATE, action) {
   return produce(state, draft => {
     switch (action.type) {
       case '@user/UPDATE_PROFILE_REQUEST': {
-        draft.profile = action.payload.user;
         draft.loading = true;
         break;
       }
